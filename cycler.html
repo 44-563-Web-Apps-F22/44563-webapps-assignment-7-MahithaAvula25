@@ -53,6 +53,8 @@
     <button onclick="makeNewDiv()">Add value</button>
     <button type="button" class="btn btn-success" onclick="get()">get value</button>
     <button type="button" class="btn btn-success" onclick="spin()">spin value</button>
+    <button type="button" class="btn btn-success" onclick="swap()">swap value</button>
+
 
 
 </body>
@@ -70,24 +72,25 @@
 
     }
     function get() {
-        var cycleritems = document.getElementsByClassName("cycler")
-        var len = cycleritems.length
+        var cyclerItems = document.getElementsByClassName("cycler")
+        var len = cyclerItems.length
         if (len > 0) {
-            cycleritems[len - 1].remove();
+            cyclerItems[len - 1].remove();
         }
     }
     function spin() {
        
-        let cycleritems = document.getElementsByClassName("cycler")
-        var len = cycleritems.length
-                if(cycleritems.length > 1) {
-                    removedItem = cycleritems[len-1]
-                    cycleritems[len-1].remove()
+        let cyclerItems = document.getElementsByClassName("cycler")
+        var len = cyclerItems.length
+                if(cyclerItems.length > 1) {
+                    removedItem = cyclerItems[len-1]
+                    cyclerItems[len-1].remove()
                     let container = document.getElementById("target")
                     container.insertBefore(removedItem, container.firstChild)
 
     }
 }
+
 
 </script>
 
