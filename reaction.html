@@ -14,7 +14,7 @@
 <button type="button" class="btn btn-primary"onclick="startTime()">Start Timer</button>
 <button type="button" class="btn btn-primary"onclick="recordReact()">React Now</button>
 <script>
-    let myTime=undefined
+ var myTime=undefined
     var  buttonTime
     function recordReact(){
         myTime=Date.now()
@@ -28,17 +28,19 @@
                 
         }     
           setTimeout(()=>{
+           
           if(myTime==undefined)
          {
            document.getElementById("target").innerHTML="Too Slow"
 
           }   
           else{
+            
             buttonTime=Date.now()
             difference=buttonTime-myTime
             document.getElementById("target").innerHTML="Time was "+difference
           } 
-        })
+        },3*1000);
     }    
 </script>
 </body>
