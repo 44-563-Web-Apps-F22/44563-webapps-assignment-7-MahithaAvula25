@@ -21,10 +21,16 @@
         console.log(myTime)
      }
     function startTime(){
-  for(let i=3;i>=0;i--){
+  // for(let i=3;i>=0;i--){
+  //   setTimeout(() => {
+  //   document.getElementById("countdown").innerHTML="Count:"+i
+  // }, (3-i)*1000);
+  var countin = Math.floor(Math.random()*(10-2+1)+2)
+    console.log(countin)
+  for(let i=0;i<countin;i++){
     setTimeout(() => {
-    document.getElementById("countdown").innerHTML="Count:"+i
-  }, (3-i)*1000);
+    document.getElementById("countdown").innerHTML=i
+  }, (countin-1-i)*1000);
                 
         }     
           setTimeout(()=>{
@@ -40,7 +46,7 @@
             difference=buttonTime-myTime
             document.getElementById("target").innerHTML="Time was "+difference
           } 
-        },3*1000);
+        },countin*1000);
     }    
 </script>
 </body>
