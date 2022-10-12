@@ -70,23 +70,24 @@
 
     }
     function get() {
-        var cycleitems = document.getElementsByClassName("cycler")
-        var len = cycleitems.length
+        var cycleritems = document.getElementsByClassName("cycler")
+        var len = cycleritems.length
         if (len > 0) {
-            cycleitems[len - 1].remove();
+            cycleritems[len - 1].remove();
         }
     }
     function spin() {
-        var cycleitems = document.getElementsByClassName("cycler")
-        var in1 = document.getElementById(cycle)
-        var newDiv = document.createElement("div");
-        var len = cycleitems.length
-        newDiv.innerHTML = cycleitems[len - 1].textContent
-        newDiv.className = "cycler"
-        cycleitems[len - 1].remove();
-        document.getElementById('target').insertBefore(newDiv, cycleitems[0]);
+       
+        let cycleritems = document.getElementsByClassName("cycler")
+        var len = cycleritems.length
+                if(cycleritems.length > 1) {
+                    removedItem = cycleritems[len-1]
+                    cycleritems[len-1].remove()
+                    let container = document.getElementById("target")
+                    container.insertBefore(removedItem, container.firstChild)
 
     }
+}
 
 </script>
 
